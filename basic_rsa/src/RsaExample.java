@@ -79,13 +79,14 @@ public class RsaExample {
 
         //Our secret message
         String message = "the answer to life the universe and everything";
+        System.out.println("Mensagem: " + message);
 
         //Encrypt the message
         String cipherText = encrypt(message, pair.getPublic());
+        System.out.println("Mensagem cifrada: " + cipherText);
 
         //Now decrypt it
         String decipheredMessage = decrypt(cipherText, pair.getPrivate());
-
         System.out.println("Mensagem decifrada: " + decipheredMessage);
 
         //Let's sign our message
